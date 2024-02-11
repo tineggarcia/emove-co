@@ -7,6 +7,7 @@
     <h2>{{ booking.pickup }} - {{ booking.dropoff }} </h2>
     <small>Sender: {{ booking.sender_name }}</small>
     <p>Item description: {{ booking.description }}</p>
+    <p><a href="{% url 'booking-edit' booking.id %}">Edit</a></p>
     {% endfor %}
 
 {% endblock content %}
