@@ -4,9 +4,9 @@
 
 <h1>Booking Home (with base.html)</h1>
     {% for booking in bookings %}
-    <h2>{{ booking.name }}</h2>
-    <small>Booked on {{ booking.date_created }}</small>
-    <p>{{ booking.description }}</p>
+    <h2>{{ booking.pickup }} - {{ booking.dropoff }} </h2>
+    <small>Sender: {{ booking.sender_name }}</small>
+    <p>Item description: {{ booking.description }}</p>
     {% endfor %}
 
 {% endblock content %}
