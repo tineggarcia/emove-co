@@ -44,4 +44,21 @@ def edit_booking(request, id):
         messages.error(request, 'Booking does not exists! Only select from below bookings.')
         return redirect('bookings')
 
+@login_required
+def delete_booking(request, id):
+    try:
+        booking = Booking.objects.get(pk=id)
+        context = {'booking':booking}
+
+        if request.method == 'GET':
+            return render(request, 'booking/booking_confirm_delete.html', context)
+        elif request.method == 'POST':
+            booking.delete()
+            messages.success(request,  'The booking has been deleted successfully.')
+        return redirect('bookings')
+
+    except Booking.DoesNotExist:
+        messages.error(request, 'Booking does not exists! Only select from below bookings.')
+        return redirect('bookings')
+
 
