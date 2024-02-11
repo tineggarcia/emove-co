@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Home</title>
-</head>
-<body>
-<h1>Booking Home</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Booking Home (with base.html)</h1>
     {% for booking in bookings %}
     <h2>{{ booking.name }}</h2>
     <small>Booked on {{ booking.date_created }}</small>
     <p>{{ booking.description }}</p>
     {% endfor %}
 
-</body>
-</html>
+{% endblock content %}
