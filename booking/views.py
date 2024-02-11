@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Booking
@@ -56,6 +57,7 @@ def about(request):
     return render(request, 'booking/about.html')
 
 
+@login_required
 def create_booking(request):
     if request.method == 'GET':
         context = {'form': BookingForm()}

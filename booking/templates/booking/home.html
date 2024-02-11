@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>Booking Home (with base.html)</h1>
+<h1>My Bookings</h1>
     {% for booking in bookings %}
     <h2>{{ booking.pickup }} - {{ booking.dropoff }} </h2>
     <small>Sender: {{ booking.sender_name }}</small>

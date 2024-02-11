@@ -18,7 +18,7 @@ class Booking(models.Model):
     payment_type = models.CharField(max_length=30)
     booked_date = models.DateField(default=timezone.now)
     booked_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    status = models.CharField(max_length=20)
+    status = models.CharField(max_length=20, default='OPEN')
 
     def __str__(self):
         return self.description
