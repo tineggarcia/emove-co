@@ -2,7 +2,7 @@
 name: Feature request
 about: Deafault template for feature request
 title: 'FEATURE REQUEST:'
-labels: ''
+labels: Feature
 assignees: ''
 
 ---
