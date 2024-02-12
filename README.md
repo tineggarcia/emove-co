@@ -1,39 +1,55 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![emoveco-logo.jpeg](static%2Fimages%2Femoveco-logo.jpeg)
 
-Welcome,
+# **_e-Move Co._**
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
+The E-Move Co. courier service is a simple, straightforward, intuitive and unique courier booking website that caters to any consumer's courier needs in a whole new different way. In these progressive and modern times, there is a huge number of businesses that offer logistics and courier services worldwide available to consumers. But what makes E-Move Co movers different from the rest? This courier service not only offers the ease and convenience of sending or receiving goods/parcels on the very same-day or even as soon as in a few hours, delivered straight to the customer's door but also, provides the benefit of sending even delicate items, food and even cakes a baker made and a whole lot more. New customers can register/sign-up to create an account, which enables them to make a booking and save into their account for record keeping purposes and modification whenever necessary. Existing customers simply just need to login and get on with the booking or access their account or bookings.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+This website was developed as part of the requirements of my course Full Stack Software Development. This is the fourth project and is built using Django+Python with HTML, CSS and Javascript. This website provides data management (using relational databases such as ElephantSQL, Postgres) wherein users can create booking and save it, retrieve it, modify and delete whenever necessary.
 
-## Codeanywhere Reminders
+[View the live website on Heroku](https://emove-co-bf9e29531760.herokuapp.com/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Table of Contents
+* [**User Experience UX**](<#user-experience-ux>)
+    *  [The Strategy Plane](<#the-strategy-plane>)
+        *  [Site Goals](<#site-goals>)
+        *  [Epics](<#epics>)
+        *  [User Stories](<#user-stories>)
+  *  [The Structure Plane](<#the-structure-plane>)
+       * [Wireframes](#Wireframe-mockups)
+       * [Database Schema](#Database-Schema)
 
-`python3 -m http.server`
+# User Experience UX
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## The Strategy plane
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### Site Goals
 
-`http_server`
+*  The e-Move Co. website is intended to cater every customer's courier needs. Unlike most of the courier services, e-Move Co aims to provide delivery services within the same day, or just within a few hours upon booking. The e-Move Co also offers superior flexibility of sending almost everything. On top of the normal items usually being sent, such as documents and goods such as clothings, gadgets, office and household stuff in packets or boxes, customers can also send food (hot, cold or frozen), plants, cooked food and even baked goods one just made. Bulky and odd items are on our list too. Sending anything to someone the soonest possible time of the day has never been this easy with e-Move Co.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Back to top](<#table-of-contents>)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Epics
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The following epics were created to organise the user stories I was able to come up with. Since the website is pretty basic and simple, where booking a courier service is the main and only objective, only a couple of tasks needs to be done, hence, there's not much Epics and User stories thought of. Epics are created using Milestones in Github.
 
-To log into the Heroku toolbelt CLI:
+* EPIC 1: Environment Setup  #1
+* EPIC 2: User Management #2
+* EPIC 3: Booking #3]
+* EPIC 4: User Interface/Styling #4]
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Back to top](<#table-of-contents>)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User Stories
 
----
+The following user stories were created from the EPICS created. 
 
-Happy coding!
+* EPIC 1: Environment Setup #1 
+  * I. Django setup/installation 
+
+
+    
+## The Scope Plane
+
+
+## The Structure Plane
