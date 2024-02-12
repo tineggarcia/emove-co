@@ -5,18 +5,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="{% static 'js/app.js' %}" defer></script>
-    <title>{% if title %} {{title}} {% else %} Booking {% endif %}</title>
+    <title>E-Move Co Same Day Courier Service</title>
 </head>
 <body>
-    <header>
+<div class="container-fluid navalert-container">
+<div class="container-fluid alert-container">
+    <div class="row d-none d-sm-block">
+        <div class="col-12">
+            <div class="site-wide-alert alert alert-warning">
+                We deliver anywhere in Dublin same day! <a href="{% url 'register' %}">Register Here!</a>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-dark navbar-expand-sm">
+    <a href="/" class="navbar-brand">eMove-Co</a>
+
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'bookings' %}">Bookings</a></li>
+            <li class="nav-item mr-2"><a class="nav-link" href="{% url 'booking-create' %}">New Booking</a></li>
+
+<!--            <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Sign In / Sign Up</a></li>-->
+        </ul>
+    </div>
+    <div class="d-none d-md-block">
         {%if request.user.is_authenticated %}
-        <span>Hi {{ request.user.first_name }} {{ request.user.last_name }}</span>
-        <a href="{% url 'logout' %}">Logout</a>
+        <p class="navbar-text my-auto mr-2"><i>Hi {{ request.user.first_name }} {{ request.user.last_name }}!</i></p>
+        <!--        <span>Hi {{ request.user.first_name }} {{ request.user.last_name }}</span>-->
+        <a href="{% url 'logout' %}" class="btn btn--cta btn--red">Logout</a>
         {%else%}
-        <a href="{% url 'login' %}">Login</a>/<a href="{% url 'register' %}">Register</a>
+        <a href="{% url 'login' %}" class="btn btn&#45;&#45;cta btn&#45;&#45;red">Login</a>/<a href="{% url 'register' %}" class="btn btn&#45;&#45;cta btn&#45;&#45;red">Register</a>
         {%endif%}
-    </header>
+
+<!--        <a href="/login" class="btn btn&#45;&#45;cta btn&#45;&#45;red">Sign In / Sign Up</a>-->
+    </div>
+</nav>
+</div>
+
     <main>
         {% if messages %}
         <div class="messages">
@@ -28,8 +59,19 @@
         </div>
         {% endif %}
 
+        <div class="container-fluid callout-container">
+            <!-- Callout -->
+<!--            <div class="opaque-overlay">&nbsp;</div>-->
+            <div class="row">
+                <div class="col-12">
+
         {% block content %}
         {% endblock %}
+                </div>
+            </div>
+            <!-- /.callout -->
+        </div>
+
     </main>
 </body>
 </html>

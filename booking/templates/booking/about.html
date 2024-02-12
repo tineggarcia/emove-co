@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>About using base.html</h1>
+
+            <section class="callout jumbotron text-center">
+                <h1 class="jumbotron-header">Send it today, get it today!</h1>
+                <hr class="block-divider block-divider--orange">
+                <p class="lead">Sign up today to start sending.
+                    <span class="d-inline d-sm-none"><br></span>
+                    <strong><mark>First one is free!</mark></strong></p>
+                <a href="{% url 'login' %}" class="btn btn-lg btn&#45;&#45;cta btn&#45;&#45;red">Book Now!</a>
+            </section>
 {% endblock content %}
