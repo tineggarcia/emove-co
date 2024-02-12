@@ -4,9 +4,9 @@ from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
 
-
+@login_required
 def home(request):
-    bookings = Booking.objects.all()
+    bookings = Booking.objects.filter(booked_by=request.user)
     context = {
         'bookings': bookings
     }
@@ -35,8 +35,10 @@ def create_booking(request):
 
 @login_required
 def edit_booking(request, id):
+
     try:
-        booking = Booking.objects.get(pk=id)
+        queryset = Booking.objects.filter(booked_by=request.user)
+        booking = get_object_or_404(queryset, pk=id)
         if request.method == 'GET':
             context = {'form': BookingForm(instance=booking), 'id': id}
             return render(request, 'booking/booking_form.html', context)
@@ -47,7 +49,9 @@ def edit_booking(request, id):
 @login_required
 def delete_booking(request, id):
     try:
-        booking = Booking.objects.get(pk=id)
+        queryset = Booking.objects.filter(booked_by=request.user)
+        booking = get_object_or_404(queryset, pk=id)
+        # booking = Booking.objects.get(pk=id)
         context = {'booking':booking}
 
         if request.method == 'GET':
